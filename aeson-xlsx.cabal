@@ -1,0 +1,106 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: d40d8b1d44aed81cc99eef50f0d5800cf250e174ebff6ff690d912f8d398aada
+
+name:           aeson-xlsx
+version:        0.1.0.0
+synopsis:       xlsx to json converter
+description:    opinionated XLSX to JSON converter
+category:       xlsx
+homepage:       https://github.com/vyorkin/aeson-xlsx#readme
+author:         Vasiliy Yorkin
+maintainer:     vasiliy.yorkin@gmail.com
+copyright:      MIT
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    README.md
+
+library
+  hs-source-dirs:
+      src
+  default-extensions: UnicodeSyntax OverloadedStrings RecordWildCards
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , base-unicode-symbols
+    , bytestring
+    , containers
+    , lens
+    , mtl
+    , text
+    , transformers
+    , xlsx
+  exposed-modules:
+      Data.Aeson.Xlsx
+  other-modules:
+      Paths_aeson_xlsx
+  default-language: Haskell2010
+
+executable cli
+  main-is: exe/CLI.hs
+  default-extensions: UnicodeSyntax OverloadedStrings RecordWildCards
+  build-depends:
+      aeson
+    , aeson-xlsx
+    , base >=4.7 && <5
+    , base-unicode-symbols
+    , bytestring
+    , containers
+    , lens
+    , mtl
+    , optparse-applicative
+    , text
+    , transformers
+    , xlsx
+  other-modules:
+      Paths_aeson_xlsx
+  default-language: Haskell2010
+
+executable sandbox
+  main-is: exe/Sandbox.hs
+  default-extensions: UnicodeSyntax OverloadedStrings RecordWildCards
+  build-depends:
+      aeson
+    , aeson-xlsx
+    , base >=4.7 && <5
+    , base-unicode-symbols
+    , bytestring
+    , containers
+    , groom
+    , lens
+    , mtl
+    , text
+    , transformers
+    , xlsx
+  other-modules:
+      Paths_aeson_xlsx
+  default-language: Haskell2010
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  default-extensions: UnicodeSyntax OverloadedStrings RecordWildCards
+  build-depends:
+      aeson
+    , aeson-xlsx
+    , base >=4.7 && <5
+    , base-unicode-symbols
+    , bytestring
+    , containers
+    , hspec
+    , lens
+    , mtl
+    , text
+    , transformers
+    , xlsx
+  other-modules:
+      Paths_aeson_xlsx
+  default-language: Haskell2010

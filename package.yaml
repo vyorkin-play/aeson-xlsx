@@ -1,0 +1,54 @@
+---
+name: aeson-xlsx
+version: 0.1.0.0
+synopsis: xlsx to json converter
+description: opinionated XLSX to JSON converter
+homepage: https://github.com/vyorkin/aeson-xlsx#readme
+license: MIT
+author: Vasiliy Yorkin
+maintainer: vasiliy.yorkin@gmail.com
+copyright: MIT
+category: xlsx
+extra-source-files:
+  - README.md
+default-extensions:
+  - UnicodeSyntax
+  - OverloadedStrings
+  - RecordWildCards
+
+library:
+  source-dirs:
+    - src
+
+executables:
+  cli:
+    main: exe/CLI.hs
+    dependencies:
+      - optparse-applicative
+      - aeson-xlsx
+  sandbox:
+    main: exe/Sandbox.hs
+    dependencies:
+      - groom
+      - aeson-xlsx
+
+tests:
+  spec:
+    source-dirs:
+      - test
+    main: Spec.hs
+    dependencies:
+      - hspec
+      - aeson-xlsx
+
+dependencies:
+  - base >= 4.7 && < 5
+  - base-unicode-symbols
+  - text
+  - bytestring
+  - transformers
+  - containers
+  - mtl
+  - lens
+  - xlsx
+  - aeson
