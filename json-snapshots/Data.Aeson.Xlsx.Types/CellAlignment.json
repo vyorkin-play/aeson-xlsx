@@ -1,0 +1,36 @@
+{
+    "seed": -5542158849366489566,
+    "samples": [
+        {
+            "vertical": "stretch",
+            "horizontal": "stretch"
+        },
+        {
+            "vertical": "start",
+            "horizontal": "stretch"
+        },
+        {},
+        {
+            "vertical": "stretch",
+            "horizontal": "space-between"
+        },
+        {
+            "vertical": "center",
+            "horizontal": "end"
+        },
+        {},
+        {
+            "vertical": "start",
+            "horizontal": "start"
+        },
+        {
+            "horizontal": "space-between"
+        },
+        {
+            "horizontal": "stretch"
+        },
+        {
+            "horizontal": "start"
+        }
+    ]
+}

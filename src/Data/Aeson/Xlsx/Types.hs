@@ -1,6 +1,8 @@
 {-# LANGUAGE TemplateHaskell #-}
+{-# LANGUAGE PatternSynonyms #-}
 module Data.Aeson.Xlsx.Types where
 
+import Data.Scientific (Scientific)
 import GHC.Generics (Generic)
 import Data.Text (Text)
 import Control.Lens (makeLenses)
@@ -11,17 +13,18 @@ data BorderStyle
   | BorderStyleDouble
   | BorderStyleDashed
   | BorderStyleDotted
-  deriving (Eq)
+  deriving (Eq, Show, Generic)
 
-instance Show BorderStyle where
-  show BorderStyleNone   = "none"
-  show BorderStyleSolid  = "solid"
-  show BorderStyleDouble = "double"
-  show BorderStyleDashed = "dashed"
-  show BorderStyleDotted = "dotted"
+data BorderSide
+  = BorderLeft
+  | BorderRight
+  | BorderTop
+  | BorderBottom
+  deriving (Eq, Show, Generic)
 
 data Border = Border
-  { _borderColor ∷ Maybe Text
+  { _borderSide  ∷ BorderSide
+  , _borderColor ∷ Maybe Text
   , _borderStyle ∷ Maybe BorderStyle
   } deriving (Eq, Show, Generic)
 
@@ -36,20 +39,20 @@ data CellBorder = CellBorder
 
 makeLenses ''CellBorder
 
+pattern CellBorderNil =
+  CellBorder Nothing Nothing Nothing Nothing
+
+cellBorderNil ∷ CellBorder → Bool
+cellBorderNil CellBorderNil = True
+cellBorderNil _             = False
+
 data Alignment
   = AlignmentCenter
   | AlignmentSpaceBetween
   | AlignmentStretch
   | AlignmentStart
   | AlignmentEnd
-  deriving (Eq)
-
-instance Show Alignment where
-  show AlignmentCenter       = "center"
-  show AlignmentSpaceBetween = "space-between"
-  show AlignmentStretch      = "stretch"
-  show AlignmentStart        = "start"
-  show AlignmentEnd          = "end"
+  deriving (Eq, Show, Generic)
 
 data CellAlignment = CellAlignment
   { _cellAlignmentHorizontal ∷ Maybe Alignment
@@ -58,6 +61,13 @@ data CellAlignment = CellAlignment
 
 makeLenses ''CellAlignment
 
+pattern CellAlignmentNil =
+  CellAlignment Nothing Nothing
+
+cellAlignmentNil ∷ CellAlignment → Bool
+cellAlignmentNil CellAlignmentNil = True
+cellAlignmentNil _                = False
+
 data CellFont = CellFont
   { _cellFontFamily ∷ Maybe String
   , _cellFontBold   ∷ Maybe Bool
@@ -65,6 +75,13 @@ data CellFont = CellFont
   } deriving (Eq, Show, Generic)
 
 makeLenses ''CellFont
+
+pattern CellFontNil =
+  CellFont Nothing Nothing Nothing
+
+cellFontNil ∷ CellFont → Bool
+cellFontNil CellFontNil = True
+cellFontNil _       = False
 
 data CellStyle = CellStyle
   { _cellStyleBorder     ∷ Maybe CellBorder
@@ -76,12 +93,19 @@ data CellStyle = CellStyle
 
 makeLenses ''CellStyle
 
+pattern CellStyleNil =
+  CellStyle Nothing Nothing Nothing Nothing Nothing
+
+cellStyleNil ∷ CellStyle → Bool
+cellStyleNil CellStyleNil = True
+cellStyleNil _            = False
+
 data Cell = Cell
   { _cellRow     ∷ Int
   , _cellCol     ∷ Int
+  , _cellStyle   ∷ Maybe CellStyle
   , _cellValue   ∷ Maybe Text
   , _cellFormula ∷ Maybe Text
-  , _cellStyle   ∷ Maybe CellStyle
   } deriving (Eq, Show, Generic)
 
 makeLenses ''Cell

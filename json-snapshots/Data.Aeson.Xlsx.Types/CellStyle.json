@@ -1,0 +1,223 @@
+{
+    "seed": -8387042167802212807,
+    "samples": [
+        {
+            "color": "#000000",
+            "alignment": {
+                "vertical": "stretch",
+                "horizontal": "center"
+            },
+            "font": {
+                "family": "Tahoma",
+                "italic": false,
+                "bold": false
+            },
+            "background": "#000000"
+        },
+        {
+            "color": "#111111",
+            "border": {
+                "right": {
+                    "style": "dotted",
+                    "color": "#111111",
+                    "side": "right"
+                },
+                "top": {
+                    "style": "none",
+                    "color": "#000000",
+                    "side": "left"
+                }
+            },
+            "alignment": {
+                "vertical": "space-between",
+                "horizontal": "start"
+            },
+            "font": {
+                "family": "Tahoma",
+                "italic": false
+            },
+            "background": "#222222"
+        },
+        {
+            "color": "#111111",
+            "border": {
+                "bottom": {
+                    "style": "none",
+                    "color": "#000000",
+                    "side": "bottom"
+                },
+                "left": {
+                    "color": "#111111",
+                    "side": "top"
+                },
+                "right": {
+                    "style": "none",
+                    "side": "left"
+                },
+                "top": {
+                    "style": "none",
+                    "color": "#000000",
+                    "side": "top"
+                }
+            },
+            "font": {
+                "italic": true,
+                "bold": true
+            },
+            "background": "#000000"
+        },
+        {
+            "color": "#222222",
+            "border": {
+                "bottom": {
+                    "color": "#111111",
+                    "side": "top"
+                },
+                "right": {
+                    "style": "dotted",
+                    "side": "top"
+                },
+                "top": {
+                    "style": "solid",
+                    "color": "#222222",
+                    "side": "left"
+                }
+            },
+            "alignment": {
+                "vertical": "start"
+            }
+        },
+        {
+            "border": {
+                "left": {
+                    "style": "dashed",
+                    "color": "#222222",
+                    "side": "left"
+                },
+                "right": {
+                    "style": "solid",
+                    "side": "top"
+                },
+                "top": {
+                    "style": "double",
+                    "color": "#222222",
+                    "side": "right"
+                }
+            },
+            "alignment": {
+                "horizontal": "space-between"
+            },
+            "background": "#000000"
+        },
+        {
+            "color": "#222222",
+            "border": {
+                "bottom": {
+                    "style": "dashed",
+                    "side": "top"
+                },
+                "left": {
+                    "color": "#222222",
+                    "side": "left"
+                },
+                "top": {
+                    "color": "#222222",
+                    "side": "bottom"
+                }
+            },
+            "alignment": {
+                "horizontal": "start"
+            },
+            "font": {
+                "family": "Verdana",
+                "italic": true,
+                "bold": true
+            },
+            "background": "#000000"
+        },
+        {
+            "border": {
+                "bottom": {
+                    "style": "double",
+                    "side": "top"
+                },
+                "left": {
+                    "style": "dotted",
+                    "color": "#222222",
+                    "side": "bottom"
+                },
+                "top": {
+                    "style": "dotted",
+                    "color": "#111111",
+                    "side": "left"
+                }
+            },
+            "font": {
+                "family": "Verdana",
+                "italic": true
+            }
+        },
+        {
+            "border": {
+                "bottom": {
+                    "style": "dashed",
+                    "side": "left"
+                },
+                "left": {
+                    "style": "none",
+                    "color": "#000000",
+                    "side": "right"
+                },
+                "right": {
+                    "style": "none",
+                    "color": "#111111",
+                    "side": "left"
+                },
+                "top": {
+                    "style": "solid",
+                    "side": "right"
+                }
+            },
+            "alignment": {
+                "vertical": "end",
+                "horizontal": "space-between"
+            },
+            "background": "#222222"
+        },
+        {
+            "color": "#222222",
+            "alignment": {
+                "horizontal": "center"
+            },
+            "font": {
+                "family": "Arial",
+                "italic": false
+            },
+            "background": "#000000"
+        },
+        {
+            "color": "#222222",
+            "border": {
+                "left": {
+                    "style": "solid",
+                    "color": "#111111",
+                    "side": "bottom"
+                },
+                "right": {
+                    "style": "none",
+                    "color": "#111111",
+                    "side": "bottom"
+                }
+            },
+            "alignment": {
+                "vertical": "start",
+                "horizontal": "space-between"
+            },
+            "font": {
+                "family": "Verdana",
+                "italic": false
+            },
+            "background": "#222222"
+        }
+    ]
+}

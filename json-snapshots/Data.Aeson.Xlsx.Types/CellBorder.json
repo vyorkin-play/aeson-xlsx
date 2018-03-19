@@ -1,0 +1,188 @@
+{
+    "seed": 8234347627790097831,
+    "samples": [
+        {
+            "bottom": {
+                "style": "dashed",
+                "color": "#111111",
+                "side": "right"
+            },
+            "left": {
+                "style": "dashed",
+                "color": "#000000",
+                "side": "bottom"
+            },
+            "right": {
+                "style": "solid",
+                "color": "#222222",
+                "side": "bottom"
+            },
+            "top": {
+                "style": "double",
+                "color": "#111111",
+                "side": "bottom"
+            }
+        },
+        {
+            "bottom": {
+                "style": "solid",
+                "color": "#222222",
+                "side": "right"
+            },
+            "left": {
+                "style": "solid",
+                "color": "#000000",
+                "side": "top"
+            },
+            "right": {
+                "style": "double",
+                "color": "#111111",
+                "side": "right"
+            },
+            "top": {
+                "style": "dashed",
+                "color": "#222222",
+                "side": "left"
+            }
+        },
+        {
+            "bottom": {
+                "style": "dashed",
+                "side": "right"
+            },
+            "left": {
+                "style": "dashed",
+                "side": "bottom"
+            },
+            "right": {
+                "style": "dotted",
+                "color": "#222222",
+                "side": "bottom"
+            }
+        },
+        {
+            "bottom": {
+                "style": "double",
+                "color": "#000000",
+                "side": "top"
+            },
+            "left": {
+                "style": "dashed",
+                "color": "#000000",
+                "side": "right"
+            },
+            "right": {
+                "style": "dashed",
+                "color": "#222222",
+                "side": "top"
+            },
+            "top": {
+                "style": "dashed",
+                "color": "#000000",
+                "side": "left"
+            }
+        },
+        {
+            "bottom": {
+                "color": "#111111",
+                "side": "bottom"
+            },
+            "left": {
+                "style": "solid",
+                "color": "#111111",
+                "side": "bottom"
+            },
+            "right": {
+                "style": "solid",
+                "side": "right"
+            }
+        },
+        {
+            "bottom": {
+                "style": "dotted",
+                "color": "#111111",
+                "side": "left"
+            },
+            "left": {
+                "style": "dashed",
+                "color": "#222222",
+                "side": "right"
+            },
+            "right": {
+                "style": "none",
+                "color": "#222222",
+                "side": "bottom"
+            },
+            "top": {
+                "style": "double",
+                "color": "#000000",
+                "side": "left"
+            }
+        },
+        {
+            "bottom": {
+                "color": "#111111",
+                "side": "bottom"
+            },
+            "right": {
+                "side": "top"
+            },
+            "top": {
+                "style": "double",
+                "side": "right"
+            }
+        },
+        {
+            "bottom": {
+                "style": "dashed",
+                "color": "#222222",
+                "side": "left"
+            },
+            "right": {
+                "style": "dotted",
+                "side": "left"
+            },
+            "top": {
+                "style": "none",
+                "side": "right"
+            }
+        },
+        {
+            "bottom": {
+                "style": "dotted",
+                "color": "#111111",
+                "side": "bottom"
+            },
+            "left": {
+                "color": "#000000",
+                "side": "bottom"
+            },
+            "right": {
+                "style": "solid",
+                "side": "left"
+            },
+            "top": {
+                "style": "none",
+                "side": "left"
+            }
+        },
+        {
+            "bottom": {
+                "side": "left"
+            },
+            "left": {
+                "style": "solid",
+                "color": "#111111",
+                "side": "right"
+            },
+            "right": {
+                "style": "double",
+                "color": "#111111",
+                "side": "left"
+            },
+            "top": {
+                "side": "top"
+            }
+        }
+    ]
+}

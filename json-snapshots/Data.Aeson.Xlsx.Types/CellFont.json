@@ -1,0 +1,47 @@
+{
+    "seed": -3125233423456258218,
+    "samples": [
+        {
+            "family": "Tahoma",
+            "bold": false
+        },
+        {
+            "family": "Arial",
+            "italic": true,
+            "bold": false
+        },
+        {
+            "bold": false
+        },
+        {
+            "italic": true,
+            "bold": true
+        },
+        {
+            "family": "Verdana",
+            "italic": false
+        },
+        {
+            "bold": false
+        },
+        {
+            "family": "Arial",
+            "italic": false,
+            "bold": true
+        },
+        {
+            "italic": false,
+            "bold": false
+        },
+        {
+            "family": "Verdana",
+            "italic": true,
+            "bold": true
+        },
+        {
+            "family": "Tahoma",
+            "italic": true,
+            "bold": true
+        }
+    ]
+}

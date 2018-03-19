@@ -40,6 +40,9 @@ tests:
     main: Spec.hs
     dependencies:
       - hspec
+      - hspec-golden-aeson
+      - QuickCheck
+      - quickcheck-instances
       - aeson-xlsx
 
 dependencies:

@@ -1,6 +1,9 @@
 test: build
 	stack test
 
+repl: build
+	stack repl --test
+
 cli: build
 	stack exec cli
 
