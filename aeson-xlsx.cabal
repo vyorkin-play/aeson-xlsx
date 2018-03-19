@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: d40d8b1d44aed81cc99eef50f0d5800cf250e174ebff6ff690d912f8d398aada
+-- hash: 9279c803562d5e92a613baa69ca3d38b9ece2b3cef933c49eabbe066254834a8
 
 name:           aeson-xlsx
 version:        0.1.0.0
@@ -24,27 +24,31 @@ extra-source-files:
 library
   hs-source-dirs:
       src
-  default-extensions: UnicodeSyntax OverloadedStrings RecordWildCards
+  default-extensions: UnicodeSyntax OverloadedStrings RecordWildCards DeriveGeneric
   build-depends:
       aeson
     , base >=4.7 && <5
     , base-unicode-symbols
     , bytestring
     , containers
+    , data-default
     , lens
     , mtl
+    , scientific
     , text
     , transformers
     , xlsx
   exposed-modules:
       Data.Aeson.Xlsx
+      Data.Aeson.Xlsx.Types
+      Data.Aeson.Xlsx.Utils
   other-modules:
       Paths_aeson_xlsx
   default-language: Haskell2010
 
 executable cli
   main-is: exe/CLI.hs
-  default-extensions: UnicodeSyntax OverloadedStrings RecordWildCards
+  default-extensions: UnicodeSyntax OverloadedStrings RecordWildCards DeriveGeneric
   build-depends:
       aeson
     , aeson-xlsx
@@ -52,9 +56,11 @@ executable cli
     , base-unicode-symbols
     , bytestring
     , containers
+    , data-default
     , lens
     , mtl
     , optparse-applicative
+    , scientific
     , text
     , transformers
     , xlsx
@@ -64,7 +70,7 @@ executable cli
 
 executable sandbox
   main-is: exe/Sandbox.hs
-  default-extensions: UnicodeSyntax OverloadedStrings RecordWildCards
+  default-extensions: UnicodeSyntax OverloadedStrings RecordWildCards DeriveGeneric
   build-depends:
       aeson
     , aeson-xlsx
@@ -72,9 +78,11 @@ executable sandbox
     , base-unicode-symbols
     , bytestring
     , containers
+    , data-default
     , groom
     , lens
     , mtl
+    , scientific
     , text
     , transformers
     , xlsx
@@ -87,7 +95,7 @@ test-suite spec
   main-is: Spec.hs
   hs-source-dirs:
       test
-  default-extensions: UnicodeSyntax OverloadedStrings RecordWildCards
+  default-extensions: UnicodeSyntax OverloadedStrings RecordWildCards DeriveGeneric
   build-depends:
       aeson
     , aeson-xlsx
@@ -95,9 +103,11 @@ test-suite spec
     , base-unicode-symbols
     , bytestring
     , containers
+    , data-default
     , hspec
     , lens
     , mtl
+    , scientific
     , text
     , transformers
     , xlsx

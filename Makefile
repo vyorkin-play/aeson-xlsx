@@ -5,7 +5,7 @@ cli: build
 	stack exec cli
 
 sandbox: build
-	stack exec sandbox -- ./examples/bar.xlsx
+	stack exec sandbox -- ./examples/static1.xlsx
 
 build:
 	stack build

@@ -15,6 +15,7 @@ default-extensions:
   - UnicodeSyntax
   - OverloadedStrings
   - RecordWildCards
+  - DeriveGeneric
 
 library:
   source-dirs:
@@ -46,6 +47,8 @@ dependencies:
   - base-unicode-symbols
   - text
   - bytestring
+  - scientific
+  - data-default
   - transformers
   - containers
   - mtl
