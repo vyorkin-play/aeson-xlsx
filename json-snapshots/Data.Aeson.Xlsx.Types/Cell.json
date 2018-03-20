@@ -1,226 +1,211 @@
 {
-    "seed": 1769010070026493956,
+    "seed": 492423206741973876,
     "samples": [
         {
             "style": {
-                "color": "#222222",
-                "border": {
-                    "bottom": {
-                        "style": "double",
-                        "color": "#111111",
-                        "side": "bottom"
-                    },
-                    "left": {
-                        "style": "dashed",
-                        "side": "right"
-                    },
-                    "right": {
-                        "style": "none",
-                        "color": "#000000",
-                        "side": "bottom"
-                    },
-                    "top": {
-                        "style": "dotted",
-                        "color": "#222222",
-                        "side": "right"
-                    }
-                },
+                "color": "#111111",
                 "alignment": {
-                    "vertical": "end",
-                    "horizontal": "end"
+                    "vertical": "start"
                 },
-                "font": {
-                    "family": "Verdana",
-                    "italic": false,
-                    "bold": true
-                },
-                "background": "#222222"
-            },
-            "value": "foo",
-            "formula": "TM1RPTROW(\"Whatever\", $C12)",
-            "row": 24,
-            "col": 14
-        },
-        {
-            "style": {
-                "color": "#222222",
-                "border": {
-                    "bottom": {
-                        "style": "none",
-                        "color": "#111111",
-                        "side": "bottom"
-                    },
-                    "right": {
-                        "color": "#000000",
-                        "side": "left"
-                    },
-                    "top": {
-                        "style": "solid",
-                        "color": "#222222",
-                        "side": "top"
-                    }
-                },
-                "alignment": {
-                    "horizontal": "center"
-                },
-                "background": "#222222"
-            },
-            "value": "foo",
-            "formula": "SUBNM($C10, $D1)",
-            "row": 5,
-            "col": 26
-        },
-        {
-            "style": {
-                "border": {
-                    "left": {
-                        "color": "#111111",
-                        "side": "bottom"
-                    },
-                    "right": {
-                        "style": "double",
-                        "color": "#222222",
-                        "side": "left"
-                    },
-                    "top": {
-                        "color": "#111111",
-                        "side": "right"
-                    }
-                },
-                "alignment": {
-                    "vertical": "center",
-                    "horizontal": "space-between"
-                },
+                "word-wrap": false,
                 "font": {
                     "family": "Tahoma",
                     "italic": false,
-                    "bold": true
-                },
-                "background": "#222222"
-            },
-            "value": "bar",
-            "formula": "TM1RPTROW(\"Whatever\", $C12)",
-            "row": 27,
-            "col": 13
-        },
-        {
-            "style": {
-                "border": {
-                    "bottom": {
-                        "side": "left"
-                    },
-                    "right": {
-                        "style": "solid",
-                        "side": "left"
-                    },
-                    "top": {
-                        "style": "double",
-                        "color": "#222222",
-                        "side": "left"
-                    }
-                },
-                "alignment": {
-                    "vertical": "start",
-                    "horizontal": "space-between"
-                },
-                "font": {
-                    "bold": true
+                    "bold": false
                 }
             },
-            "row": 26,
-            "col": 6
-        },
-        {
-            "row": 21,
-            "col": 9
+            "value": 42.5,
+            "rowSpan": 1,
+            "row": 11,
+            "col": 27
         },
         {
             "style": {
                 "color": "#000000",
                 "border": {
                     "bottom": {
-                        "color": "#000000",
-                        "side": "bottom"
+                        "color": "#000000"
                     },
                     "left": {
-                        "style": "dashed",
-                        "color": "#222222",
-                        "side": "left"
+                        "color": "#000000"
                     },
                     "right": {
-                        "color": "#222222",
-                        "side": "right"
+                        "style": "dashed"
                     },
                     "top": {
-                        "color": "#111111",
-                        "side": "bottom"
+                        "style": "solid",
+                        "color": "#111111"
                     }
                 },
                 "alignment": {
-                    "vertical": "space-between",
-                    "horizontal": "center"
-                }
+                    "horizontal": "space-between"
+                },
+                "word-wrap": true,
+                "background": "#000000"
             },
             "value": "foo",
-            "formula": "DBRW($C5, $B2)",
-            "row": 14,
-            "col": 1
+            "formula": "SUBNM($C10, $D1)",
+            "rowSpan": 2,
+            "colSpan": 1,
+            "row": 5,
+            "col": 30
         },
         {
             "style": {
-                "color": "#111111",
+                "color": "#000000",
                 "alignment": {
                     "vertical": "stretch",
-                    "horizontal": "start"
+                    "horizontal": "stretch"
                 },
+                "word-wrap": false,
+                "font": {
+                    "underline": "wavy",
+                    "family": "Verdana",
+                    "italic": true,
+                    "bold": false
+                },
+                "background": "#000000"
+            },
+            "value": "foo",
+            "formula": "SUBNM($C10, $D1)",
+            "colSpan": 2,
+            "row": 22,
+            "col": 16
+        },
+        {
+            "value": 42.5,
+            "formula": "TM1RPTROW(\"Whatever\", $C12)",
+            "rowSpan": 2,
+            "colSpan": 2,
+            "row": 10,
+            "col": 17
+        },
+        {
+            "style": {
+                "color": "#000000",
+                "border": {
+                    "bottom": {
+                        "style": "none",
+                        "color": "#222222"
+                    },
+                    "left": {
+                        "style": "solid",
+                        "color": "#111111"
+                    },
+                    "right": {
+                        "color": "#111111"
+                    },
+                    "top": {
+                        "color": "#111111"
+                    }
+                },
+                "word-wrap": false,
                 "font": {
                     "family": "Tahoma",
                     "italic": true,
-                    "bold": true
-                },
-                "background": "#111111"
+                    "bold": false
+                }
             },
-            "formula": "TM1RPTROW(\"Whatever\", $C12)",
-            "row": 24,
-            "col": 11
+            "value": 42.5,
+            "formula": "DBRW($C5, $B2)",
+            "row": 10,
+            "col": 19
         },
         {
             "style": {
                 "border": {
-                    "left": {
-                        "style": "none",
-                        "side": "left"
-                    },
-                    "right": {
-                        "style": "dashed",
-                        "side": "bottom"
-                    },
-                    "top": {
+                    "bottom": {
                         "style": "dotted",
-                        "color": "#222222",
-                        "side": "right"
-                    }
+                        "color": "#111111"
+                    },
+                    "left": {
+                        "color": "#111111"
+                    },
+                    "top": {}
                 },
-                "font": {
-                    "family": "Arial"
-                },
-                "background": "#111111"
+                "word-wrap": true,
+                "background": "#000000"
             },
-            "formula": "DBRW($C5, $B2)",
-            "row": 24,
-            "col": 5
+            "value": true,
+            "formula": "TM1RPTROW(\"Whatever\", $C12)",
+            "rowSpan": 2,
+            "row": 19,
+            "col": 28
         },
         {
-            "value": "baz",
-            "formula": "SUBNM($C10, $D1)",
-            "row": 3,
+            "style": {
+                "color": "#222222",
+                "border": {
+                    "bottom": {},
+                    "right": {
+                        "color": "#111111"
+                    }
+                },
+                "alignment": {
+                    "horizontal": "stretch"
+                },
+                "word-wrap": false,
+                "font": {
+                    "underline": "dotted",
+                    "family": "Verdana",
+                    "italic": true
+                },
+                "background": "#000000"
+            },
+            "value": "foo",
+            "formula": "TM1RPTROW(\"Whatever\", $C12)",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "row": 21,
             "col": 19
         },
         {
+            "formula": "SUBNM($C10, $D1)",
+            "colSpan": 2,
+            "row": 16,
+            "col": 13
+        },
+        {
+            "style": {
+                "color": "#000000",
+                "border": {
+                    "bottom": {
+                        "style": "dotted",
+                        "color": "#222222"
+                    },
+                    "left": {
+                        "color": "#000000"
+                    },
+                    "top": {
+                        "style": "solid"
+                    }
+                },
+                "alignment": {
+                    "vertical": "space-between",
+                    "horizontal": "stretch"
+                },
+                "font": {
+                    "underline": "wavy",
+                    "family": "Tahoma",
+                    "italic": true,
+                    "bold": true
+                },
+                "background": "#000000"
+            },
             "value": "foo",
+            "formula": "SUBNM($C10, $D1)",
+            "rowSpan": 2,
+            "colSpan": 1,
+            "row": 9,
+            "col": 14
+        },
+        {
+            "value": 42.5,
             "formula": "TM1RPTROW(\"Whatever\", $C12)",
-            "row": 22,
-            "col": 6
+            "rowSpan": 1,
+            "colSpan": 1,
+            "row": 13,
+            "col": 10
         }
     ]
 }

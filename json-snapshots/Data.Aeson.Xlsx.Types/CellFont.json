@@ -1,46 +1,54 @@
 {
-    "seed": -3125233423456258218,
+    "seed": -6203945634754268327,
     "samples": [
         {
+            "underline": "dotted",
             "family": "Tahoma",
-            "bold": false
-        },
-        {
-            "family": "Arial",
-            "italic": true,
-            "bold": false
-        },
-        {
-            "bold": false
-        },
-        {
-            "italic": true,
             "bold": true
         },
         {
-            "family": "Verdana",
+            "underline": "dashed",
             "italic": false
         },
         {
+            "underline": "solid",
+            "family": "Tahoma",
+            "italic": true,
             "bold": false
         },
         {
-            "family": "Arial",
-            "italic": false,
-            "bold": true
+            "underline": "wavy",
+            "family": "Tahoma",
+            "italic": true,
+            "bold": false
         },
         {
-            "italic": false,
+            "underline": "solid",
+            "family": "Tahoma"
+        },
+        {
+            "underline": "double",
+            "family": "Verdana",
+            "italic": true
+        },
+        {
+            "underline": "solid",
+            "family": "Tahoma",
+            "italic": false
+        },
+        {
+            "underline": "double",
+            "family": "Verdana",
+            "italic": true,
+            "bold": false
+        },
+        {
+            "underline": "wavy",
+            "family": "Tahoma",
             "bold": false
         },
         {
             "family": "Verdana",
-            "italic": true,
-            "bold": true
-        },
-        {
-            "family": "Tahoma",
-            "italic": true,
             "bold": true
         }
     ]

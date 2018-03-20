@@ -1,11 +1,24 @@
 {-# LANGUAGE TemplateHaskell #-}
-{-# LANGUAGE PatternSynonyms #-}
 module Data.Aeson.Xlsx.Types where
 
 import Data.Scientific (Scientific)
 import GHC.Generics (Generic)
 import Data.Text (Text)
 import Control.Lens (makeLenses)
+
+-- | Wrapper type for HEX RGB color.
+newtype Color = Color Text
+  deriving (Eq, Show, Generic)
+
+data CellValue
+  = StringValue Text
+  | NumberValue Scientific
+  | BoolValue Bool
+  deriving (Eq, Show, Generic)
+
+-- | Wrapper type for cell formula.
+newtype CellFormula = CellFormula Text
+  deriving (Eq, Show, Generic)
 
 data BorderStyle
   = BorderStyleNone
@@ -15,16 +28,8 @@ data BorderStyle
   | BorderStyleDotted
   deriving (Eq, Show, Generic)
 
-data BorderSide
-  = BorderLeft
-  | BorderRight
-  | BorderTop
-  | BorderBottom
-  deriving (Eq, Show, Generic)
-
 data Border = Border
-  { _borderSide  ∷ BorderSide
-  , _borderColor ∷ Maybe Text
+  { _borderColor ∷ Maybe Color
   , _borderStyle ∷ Maybe BorderStyle
   } deriving (Eq, Show, Generic)
 
@@ -38,13 +43,6 @@ data CellBorder = CellBorder
   } deriving (Eq, Show, Generic)
 
 makeLenses ''CellBorder
-
-pattern CellBorderNil =
-  CellBorder Nothing Nothing Nothing Nothing
-
-cellBorderNil ∷ CellBorder → Bool
-cellBorderNil CellBorderNil = True
-cellBorderNil _             = False
 
 data Alignment
   = AlignmentCenter
@@ -61,51 +59,42 @@ data CellAlignment = CellAlignment
 
 makeLenses ''CellAlignment
 
-pattern CellAlignmentNil =
-  CellAlignment Nothing Nothing
-
-cellAlignmentNil ∷ CellAlignment → Bool
-cellAlignmentNil CellAlignmentNil = True
-cellAlignmentNil _                = False
+data UnderlineStyle
+  = UnderlineStyleSolid
+  | UnderlineStyleDouble
+  | UnderlineStyleDotted
+  | UnderlineStyleDashed
+  | UnderlineStyleWavy
+  deriving (Eq, Show, Generic)
 
 data CellFont = CellFont
-  { _cellFontFamily ∷ Maybe String
-  , _cellFontBold   ∷ Maybe Bool
-  , _cellFontItalic ∷ Maybe Bool
+  { _cellFontFamily    ∷ Maybe Text
+  , _cellFontBold      ∷ Maybe Bool
+  , _cellFontItalic    ∷ Maybe Bool
+  , _cellFontUnderline ∷ Maybe UnderlineStyle
   } deriving (Eq, Show, Generic)
 
 makeLenses ''CellFont
-
-pattern CellFontNil =
-  CellFont Nothing Nothing Nothing
-
-cellFontNil ∷ CellFont → Bool
-cellFontNil CellFontNil = True
-cellFontNil _       = False
 
 data CellStyle = CellStyle
   { _cellStyleBorder     ∷ Maybe CellBorder
   , _cellStyleAlignment  ∷ Maybe CellAlignment
   , _cellStyleFont       ∷ Maybe CellFont
-  , _cellStyleColor      ∷ Maybe Text
-  , _cellStyleBackground ∷ Maybe Text
+  , _cellStyleWordWrap   ∷ Maybe Bool
+  , _cellStyleColor      ∷ Maybe Color
+  , _cellStyleBackground ∷ Maybe Color
   } deriving (Eq, Show, Generic)
 
 makeLenses ''CellStyle
 
-pattern CellStyleNil =
-  CellStyle Nothing Nothing Nothing Nothing Nothing
-
-cellStyleNil ∷ CellStyle → Bool
-cellStyleNil CellStyleNil = True
-cellStyleNil _            = False
-
 data Cell = Cell
   { _cellRow     ∷ Int
   , _cellCol     ∷ Int
+  , _cellRowSpan ∷ Maybe Int
+  , _cellColSpan ∷ Maybe Int
   , _cellStyle   ∷ Maybe CellStyle
-  , _cellValue   ∷ Maybe Text
-  , _cellFormula ∷ Maybe Text
+  , _cellValue   ∷ Maybe CellValue
+  , _cellFormula ∷ Maybe CellFormula
   } deriving (Eq, Show, Generic)
 
 makeLenses ''Cell

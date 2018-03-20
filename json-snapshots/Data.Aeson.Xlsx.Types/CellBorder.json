@@ -1,188 +1,122 @@
 {
-    "seed": 8234347627790097831,
+    "seed": 7519985573639953534,
     "samples": [
         {
             "bottom": {
-                "style": "dashed",
-                "color": "#111111",
-                "side": "right"
+                "style": "none",
+                "color": "#000000"
             },
             "left": {
                 "style": "dashed",
-                "color": "#000000",
-                "side": "bottom"
-            },
-            "right": {
-                "style": "solid",
-                "color": "#222222",
-                "side": "bottom"
-            },
-            "top": {
-                "style": "double",
-                "color": "#111111",
-                "side": "bottom"
-            }
-        },
-        {
-            "bottom": {
-                "style": "solid",
-                "color": "#222222",
-                "side": "right"
-            },
-            "left": {
-                "style": "solid",
-                "color": "#000000",
-                "side": "top"
-            },
-            "right": {
-                "style": "double",
-                "color": "#111111",
-                "side": "right"
-            },
-            "top": {
-                "style": "dashed",
-                "color": "#222222",
-                "side": "left"
-            }
-        },
-        {
-            "bottom": {
-                "style": "dashed",
-                "side": "right"
-            },
-            "left": {
-                "style": "dashed",
-                "side": "bottom"
+                "color": "#222222"
             },
             "right": {
                 "style": "dotted",
-                "color": "#222222",
-                "side": "bottom"
-            }
-        },
-        {
-            "bottom": {
-                "style": "double",
-                "color": "#000000",
-                "side": "top"
-            },
-            "left": {
-                "style": "dashed",
-                "color": "#000000",
-                "side": "right"
-            },
-            "right": {
-                "style": "dashed",
-                "color": "#222222",
-                "side": "top"
+                "color": "#111111"
             },
             "top": {
-                "style": "dashed",
-                "color": "#000000",
-                "side": "left"
+                "color": "#222222"
             }
         },
         {
+            "top": {}
+        },
+        {
             "bottom": {
-                "color": "#111111",
-                "side": "bottom"
-            },
-            "left": {
-                "style": "solid",
-                "color": "#111111",
-                "side": "bottom"
+                "style": "dashed",
+                "color": "#000000"
             },
             "right": {
-                "style": "solid",
-                "side": "right"
-            }
+                "style": "dotted"
+            },
+            "top": {}
         },
         {
-            "bottom": {
-                "style": "dotted",
-                "color": "#111111",
-                "side": "left"
-            },
             "left": {
-                "style": "dashed",
-                "color": "#222222",
-                "side": "right"
+                "style": "none"
             },
             "right": {
                 "style": "none",
-                "color": "#222222",
-                "side": "bottom"
-            },
-            "top": {
-                "style": "double",
-                "color": "#000000",
-                "side": "left"
-            }
-        },
-        {
-            "bottom": {
-                "color": "#111111",
-                "side": "bottom"
-            },
-            "right": {
-                "side": "top"
-            },
-            "top": {
-                "style": "double",
-                "side": "right"
+                "color": "#111111"
             }
         },
         {
             "bottom": {
                 "style": "dashed",
-                "color": "#222222",
-                "side": "left"
+                "color": "#000000"
+            },
+            "left": {
+                "style": "solid"
             },
             "right": {
-                "style": "dotted",
-                "side": "left"
+                "style": "solid",
+                "color": "#222222"
             },
             "top": {
-                "style": "none",
-                "side": "right"
+                "style": "dashed"
             }
         },
         {
             "bottom": {
-                "style": "dotted",
-                "color": "#111111",
-                "side": "bottom"
+                "style": "none",
+                "color": "#000000"
             },
             "left": {
-                "color": "#000000",
-                "side": "bottom"
+                "style": "none",
+                "color": "#000000"
             },
             "right": {
-                "style": "solid",
-                "side": "left"
+                "style": "none"
             },
             "top": {
-                "style": "none",
-                "side": "left"
-            }
-        },
-        {
-            "bottom": {
-                "side": "left"
-            },
-            "left": {
-                "style": "solid",
-                "color": "#111111",
-                "side": "right"
-            },
-            "right": {
                 "style": "double",
-                "color": "#111111",
-                "side": "left"
+                "color": "#222222"
+            }
+        },
+        {
+            "bottom": {
+                "style": "dotted",
+                "color": "#222222"
+            },
+            "right": {
+                "style": "solid",
+                "color": "#111111"
             },
             "top": {
-                "side": "top"
+                "style": "dotted"
             }
+        },
+        {
+            "bottom": {
+                "style": "solid",
+                "color": "#000000"
+            },
+            "right": {
+                "style": "dashed",
+                "color": "#111111"
+            }
+        },
+        {
+            "left": {
+                "style": "dotted",
+                "color": "#000000"
+            },
+            "right": {
+                "color": "#222222"
+            },
+            "top": {
+                "style": "dotted",
+                "color": "#111111"
+            }
+        },
+        {
+            "bottom": {
+                "style": "solid"
+            },
+            "right": {
+                "color": "#111111"
+            },
+            "top": {}
         }
     ]
 }

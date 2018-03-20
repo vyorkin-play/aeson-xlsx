@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5ea67d943f8d7002ebd3ad932f2a05a6d0285fa2698aad2e5b5bf083fc00e9dd
+-- hash: d6156709ae3ce79a58ad859d4a1bd3d4d0cc01573973a722d3864aa352b44421
 
 name:           aeson-xlsx
 version:        0.1.0.0
@@ -40,6 +40,7 @@ library
     , xlsx
   exposed-modules:
       Data.Aeson.Xlsx
+      Data.Aeson.Xlsx.Constructors
       Data.Aeson.Xlsx.JSON
       Data.Aeson.Xlsx.Types
       Data.Aeson.Xlsx.Utils

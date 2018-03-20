@@ -1,11 +1,26 @@
 module Data.Aeson.Xlsx.Arbitrary where
 
 import Prelude.Unicode
+import Data.Scientific (fromFloatDigits)
 import Data.Text (Text)
 import qualified Data.Text as T
 import Test.QuickCheck
 import Test.QuickCheck.Instances.Text
+import Test.QuickCheck.Instances.Scientific
 import Data.Aeson.Xlsx.Types
+
+instance Arbitrary Color where
+  arbitrary = Color <$> arbitrary
+
+instance Arbitrary CellValue where
+  arbitrary = oneof
+    [ StringValue <$> arbitrary
+    , NumberValue <$> arbitrary
+    , BoolValue   <$> arbitrary
+    ]
+
+instance Arbitrary CellFormula where
+  arbitrary = CellFormula <$> arbitrary
 
 instance Arbitrary BorderStyle where
   arbitrary = elements
@@ -16,18 +31,9 @@ instance Arbitrary BorderStyle where
     , BorderStyleDotted
     ]
 
-instance Arbitrary BorderSide where
-  arbitrary = elements
-    [ BorderLeft
-    , BorderRight
-    , BorderTop
-    , BorderBottom
-    ]
-
 instance Arbitrary Border where
   arbitrary = Border
-    <$> arbitrary
-    <*> elements colors
+    <$> elements colors
     <*> arbitrary
 
 instance Arbitrary CellBorder where
@@ -51,9 +57,19 @@ instance Arbitrary CellAlignment where
     <$> arbitrary
     <*> arbitrary
 
+instance Arbitrary UnderlineStyle where
+  arbitrary = elements
+    [ UnderlineStyleSolid
+    , UnderlineStyleDouble
+    , UnderlineStyleDotted
+    , UnderlineStyleDashed
+    , UnderlineStyleWavy
+    ]
+
 instance Arbitrary CellFont where
   arbitrary = CellFont
     <$> elements fontFamilies
+    <*> arbitrary
     <*> arbitrary
     <*> arbitrary
     where
@@ -69,6 +85,7 @@ instance Arbitrary CellStyle where
     <$> arbitrary
     <*> arbitrary
     <*> arbitrary
+    <*> arbitrary
     <*> elements colors
     <*> elements colors
 
@@ -76,27 +93,34 @@ instance Arbitrary Cell where
   arbitrary = do
     Positive row ← arbitrary
     Positive col ← arbitrary
+    rowSpan ← elements spans
+    colSpan ← elements spans
     style ← arbitrary
     value ← elements values
     formula ← elements formulas
-    return $ Cell row col style value formula
+    return $ Cell row col rowSpan colSpan style value formula
     where
+      spans =
+        [ Nothing
+        , Just 1
+        , Just 2
+        ]
       values =
         [ Nothing
-        , Just "foo"
-        , Just "bar"
-        , Just "baz"
+        , Just $ StringValue "foo"
+        , Just $ NumberValue $ fromFloatDigits 42.5
+        , Just $ BoolValue True
         ]
       formulas =
         [ Nothing
-        , Just "SUBNM($C10, $D1)"
-        , Just "TM1RPTROW(\"Whatever\", $C12)"
-        , Just "DBRW($C5, $B2)"
+        , Just $ CellFormula "SUBNM($C10, $D1)"
+        , Just $ CellFormula "TM1RPTROW(\"Whatever\", $C12)"
+        , Just $ CellFormula "DBRW($C5, $B2)"
         ]
 
-colors ∷ [Maybe Text]
+colors ∷ [Maybe Color]
 colors = [ Nothing
-         , Just "#000000"
-         , Just "#111111"
-         , Just "#222222"
+         , Just $ Color "#000000"
+         , Just $ Color "#111111"
+         , Just $ Color "#222222"
          ]
